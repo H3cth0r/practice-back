@@ -4,3 +4,12 @@
 - Lombok:
 - PostgreSQL database
 
+## Setup
+- `mvn clean install`
+- `docker compose up`
+- `mvn spring-boot:run`
+
+### clean db
+- `docker compose down`
+- `docker compose down --volumes`: removes the volume
+- `docker rmi postgres:latest`
