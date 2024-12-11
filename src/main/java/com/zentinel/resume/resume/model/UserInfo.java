@@ -12,6 +12,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import java.sql.Timestamp;
 
 @Entity
@@ -36,6 +38,7 @@ public class UserInfo {
 
     private Boolean active;
 
+    @CreationTimestamp
     private Timestamp createAt;
 
     @Column(name="email", length=50, nullable=false)
