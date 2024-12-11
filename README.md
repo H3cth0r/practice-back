@@ -26,3 +26,28 @@
 
 - model: structre of your database entities (mapped to database tables).
 - respository: responsible for interacting directly with the db.
+
+
+## Test Curls
+### Crete User
+```
+curl -X POST http://localhost:8080/v1/user-info/create -H "Content-Type: application/json" -d '{
+  "name": "John Doe",
+  "active": true,
+  "email": "johndoe@example.com",
+  "secondEmail": "johndoe2@example.com"
+}'
+```
+reponse:
+```
+true
+```
+
+### Look by email
+```
+curl -X GET "http://localhost:8080/v1/user-info/user-info-by-email?email=johndoe@example.com"
+```
+response:
+```
+{"id":1,"name":"John Doe","active":true,"createAt":"2024-12-11T23:02:28.663+00:00","email":"johndoe@example.com","secondEmail":"johndoe2@example.com"}
+```
