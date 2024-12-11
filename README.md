@@ -1,3 +1,6 @@
+## Why?
+I'm just practicing and remembering some things about springboot.
+
 ## Dependencies
 - Spring Web: build web, including RESTful, applications using Spring MVC. Uses Apache Tomcat as the default embedded.
 - Spring Data JPA:
